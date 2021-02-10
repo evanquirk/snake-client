@@ -10,6 +10,18 @@ const setupInput = function(conn) {
     if (key === '\u0003') {
       process.exit();
     }
+    if (key === 'w') {
+      conn.write('Move: up');
+    }
+    if (key === 's') {
+      conn.write('Move: down');
+    }
+    if (key === 'a') {
+      conn.write('Move: left');
+    }
+    if (key === 'd') {
+      conn.write('Move: right');
+    }
   })
   return stdin;
 }
